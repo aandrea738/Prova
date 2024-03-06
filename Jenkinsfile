@@ -10,6 +10,7 @@ pipeline{
             steps{
                 unstash 'scm'
                 script{
+                    sh "./gradlew build"
                     echo "hello"
                 }
             }
