@@ -10,7 +10,7 @@ pipeline{
             steps{
                 unstash 'scm'
                 script{
-                    docker.i
+
                 }
             }
         }
