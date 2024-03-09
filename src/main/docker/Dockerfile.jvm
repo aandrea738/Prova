@@ -6,7 +6,7 @@ ENV LANGUAGE='en_US:en'
 
 FROM quay.io/quarkus/ubi-quarkus-graalvmce-builder-image:jdk-17 AS build
 WORKDIR /$PROGETTO
-RUN ./gradlew api:build
+RUN ./gradlew dev
 
 EXPOSE 9090
 USER 185
