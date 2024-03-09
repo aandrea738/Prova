@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('prova'){
+        stage('build'){
             steps{
                 sh 'gcloud version'
             }
