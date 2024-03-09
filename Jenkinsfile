@@ -9,6 +9,7 @@ pipeline {
         stage('Install Google Cloud SDK') {
             steps {
                 script {
+                    sh 'rm -rf /var/jenkins_home/google-cloud-sdk'
                     sh 'curl https://sdk.cloud.google.com | bash'
                     sh 'echo "source $HOME/google-cloud-sdk/path.bash.inc" >> $HOME/.bashrc'
                     sh 'echo "source $HOME/google-cloud-sdk/completion.bash.inc" >> $HOME/.bashrc'
