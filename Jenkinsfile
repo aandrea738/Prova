@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                sh 'gcloud version'
+                echo 'DIOCANEEEEEEEEEEEEEEEEE'
             }
         }
     }
