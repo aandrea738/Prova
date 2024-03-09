@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage('Build'){
+        stage('build'){
             steps{
-                echo 'DIOCANEEEEEEEEEEEEEEEEE'
+                sh 'gcloud version'
             }
         }
     }
