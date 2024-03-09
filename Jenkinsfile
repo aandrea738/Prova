@@ -1,12 +1,14 @@
 pipeline{
     agent any
+    agent{
+        docker{
+            image 'node:16-alpine'
+        }
+    }
     stages{
         stage('build'){
             steps{
-                dir('ci/prova'){
-                    sh "docker-compose build"
-                }
-                sh "gcloud version"
+                sh "ipconfig"
             }
         }
     }
