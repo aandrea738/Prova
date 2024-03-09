@@ -1,20 +1,11 @@
-pipeline{
-    agent any
-    stages{
-        stage('build'){
-            steps{
-                echo 'Building the application...'
-            }
-        }
-        stage('testing'){
-            steps{
-                echo 'Testing the application...'
-            }
-        }
-        stage('testing'){
-        steps{
-            echo 'Testing the application...'
-            }
-        }
+node {
+    withCredentials([
+        usernamePassword(
+            credentialsId: 'Secret-fake',
+            usernameVariable: 'NEXUS_USERNAME',
+            passwordVariable: 'NEXUS_PASSWORD'
+        )
+    ]) {
+        echo 'My credentials: $NEXUS_USERNAME:$NEXUS_PASSWORD'
     }
 }
