@@ -1,9 +1,14 @@
-version: '3.1'
-services:
-  backend:
-    build:
-      context: ../Prova
-      dockerfile: src/main/docker/Dockerfile.jvm
+backend:
+  build:
+    dockerfile: api/src/main/docker/Dockerfile
+  image: 'gesap-interno/backend'
+  container_name: 'gesap-interno-backend'
+  environment:
+    BE_PORT: ${BE_PORT}
+  ports:
+    - 60196:9090
+  restart: always
+  network_mode: bridge
 
 
 

@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                sh 'gcloud version'
+                sh "docker-compose build"
+                sh "gcloud version"
             }
         }
     }
