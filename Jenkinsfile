@@ -3,7 +3,9 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                sh "docker-compose build"
+                dir('ci/prova'){
+                    sh "docker-compose build"
+                }
                 sh "gcloud version"
             }
         }
